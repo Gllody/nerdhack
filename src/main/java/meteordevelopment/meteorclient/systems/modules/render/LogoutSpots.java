@@ -246,6 +246,7 @@ public class LogoutSpots extends Module {
 
             healthText = " " + health;
 
+            //Colors
             if (chatinfo.get()){
                 ChatUtils.sendMsg(Text.literal(name+" Logged out at ").append(Text.literal("\uD835\uDE87: "+easyx+" \uD835\uDE88: "+easyy+" \uD835\uDE89: "+easyz)
                     .setStyle(Style.EMPTY.withColor(TextColor.fromRgb(feedbackColor.get().getPacked()))
