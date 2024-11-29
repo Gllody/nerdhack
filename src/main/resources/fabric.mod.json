@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "name": "NerdHack",
+  "id": "nerd-hack",
+  "version": "${version}",
+  "description": "NerdHack is based on Meteor Client and other Clients. (This project is creating for fun btw)",
+  "authors": [
+    "Gllody",
+    "MineGame159",
+    "squidoodly",
+    "seasnail",
+    "and various authors!"
+  ],
+  "contact": {
+    "homepage": "https://discord.gg/EMPYVRPHkp",
+    "issues": "https://discord.gg/EMPYVRPHkp",
+    "sources": "https://github.com/MeteorDevelopment/meteor-client",
+    "discord": "https://discord.gg/EMPYVRPHkp"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/nerd-hack/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "meteordevelopment.meteorclient.NerdHack"
+    ]
+  },
+  "mixins": [
+    "meteor-client.mixins.json",
+    "meteor-client-baritone.mixins.json",
+    "meteor-client-indigo.mixins.json",
+    "meteor-client-sodium.mixins.json",
+    "meteor-client-canvas.mixins.json",
+    "meteor-client-lithium.mixins.json",
+    "meteor-client-indium.mixins.json",
+    "meteor-client-viafabricplus.mixins.json"
+  ],
+  "accessWidener": "meteor-client.accesswidener",
+  "custom": {
+    "nerd-hack:devbuild": "${devbuild}",
+    "nerd-hack:color": "101,233,42",
+    "nerd-hack:commit": "${commit}",
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/EMPYVRPHkp"
+      }
+    }
+  },
+  "depends": {
+    "java": ">=21",
+    "minecraft": ["${minecraft_version}"],
+    "fabricloader": ">=${loader_version}"
+  },
+  "breaks": {
+    "optifabric": "*",
+    "feather": "*",
+    "origins": "*",
+    "wurst": "*",
+    "sodium": "<0.5.8",
+    "morechathistory": "*"
+  }
+}

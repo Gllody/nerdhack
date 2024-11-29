@@ -1,0 +1,9 @@
+https://github.com/MeteorDevelopment/meteor-client
+https://github.com/Nekiplay/MeteorPlus
+https://github.com/KassuK1/Blackout
+https://github.com/etianl/Trouser-Streak
+https://github.com/AntiCope/orion
+https://github.com/AntiCope/meteor-crash-addon
+https://github.com/RattlesHyper/lyra-addon
+https://github.com/Zgoly/Meteorist
+https://github.com/cqb13/Numby-hack
