@@ -1,6 +1,6 @@
 
 <p align="center">
-<img src="https://meteorclient.com/icon.png" alt="meteor-client-logo" width="15%"/>
+<img src="https://images.emojiterra.com/twitter/v14.0/1024px/1f913.png" alt="meteor-client-logo" width="15%"/>
 </p>
 
 <h1 align="center">NerdHack</h1>
