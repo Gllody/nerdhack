@@ -68,8 +68,8 @@ public class AutoEz extends Module {
     );
     private final Setting<List<String>> killMessages = sgKill.add(new StringListSetting.Builder()
         .name("Kill Messages")
-        .description("Messages to send when killing an enemy with blackout message mode on")
-        .defaultValue(List.of("Fucked by BlackOut!", "BlackOut on top", "BlackOut strong", "BlackOut gayming"))
+        .description("Messages to send when killing an enemy with NerdHack message mode on")
+        .defaultValue(List.of("Fucked by NerdHack!", "NerdHack on top", "NerdHack strong", "I use NerdHack btw."))
         .visible(() -> killMsgMode.get() == MessageMode.NerdHack)
         .build()
     );
@@ -97,7 +97,7 @@ public class AutoEz extends Module {
     private int timer = 0;
 
     private final String[] nerdhacke = new String[]{
-        "Wow, wlasnie przegrales w grze z klockami %s",
+        "Wow, ale stiv %s",
         "%s zdedales w klockach lol.",
         "%s Nie stac cie na lepszego pc? Czy nie masz skilla?",
         "%s L",
