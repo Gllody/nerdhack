@@ -4,7 +4,7 @@
 </p>
 
 <h1 align="center">NerdHack</h1>
-<p align="center">A Minecraft Fabric Utility Mod for anarchy servers.</p>
+<p align="center">A Minecraft Fabric Utility Mod for anarchy servers. Based on Meteor Client.</p>
 
 <div align="center">
     <a href="https://discord.gg/H7Shz65Kmk"><img src="https://img.shields.io/discord/689197705683140636?logo=discord" alt="Discord"/></a>
@@ -24,7 +24,7 @@
 - Run `./gradlew build`
 
 ### Installation
-Follow the [guide](https://meteorclient.com/faq/installation) on the wiki.
+- Put Mod and Baritone mod in mods folder (.minecraft)
 
 ## Contributions
 We will review and help with all reasonable pull requests as long as the guidelines below are met.
