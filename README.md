@@ -1,21 +1,10 @@
 
 <p align="center">
-<img src="https://images.emojiterra.com/twitter/v14.0/1024px/1f913.png" alt="meteor-client-logo" width="15%"/>
+<img src="https://images.emojiterra.com/twitter/v14.0/1024px/1f913.png" alt="nerd-hack-logo" width="15%"/>
 </p>
 
 <h1 align="center">NerdHack</h1>
 <p align="center">A Minecraft Fabric Utility Mod for anarchy servers. Based on Meteor Client.</p>
-
-<div align="center">
-    <a href="https://discord.gg/H7Shz65Kmk"><img src="https://img.shields.io/discord/689197705683140636?logo=discord" alt="Discord"/></a>
-    <br>
-    <img src="https://img.shields.io/github/last-commit/MeteorDevelopment/meteor-client" alt="GitHub last commit"/>
-    <img src="https://img.shields.io/github/commit-activity/w/MeteorDevelopment/meteor-client" alt="GitHub commit activity"/>
-    <img src="https://img.shields.io/github/contributors/MeteorDevelopment/meteor-client" alt="GitHub contributors"/>
-    <br>
-    <img src="https://img.shields.io/github/languages/code-size/MeteorDevelopment/meteor-client" alt="GitHub code size in bytes"/>
-    <img src="https://tokei.rs/b1/github/MeteorDevelopment/meteor-client" alt="GitHub lines of code"/>
-</div>
 
 ## Usage
 
@@ -24,7 +13,7 @@
 - Run `./gradlew build`
 
 ### Installation
-- Put Mod and Baritone mod in mods folder (.minecraft)
+- Put this mod and Baritone mod in mods folder (.minecraft)
 
 ## Contributions
 We will review and help with all reasonable pull requests as long as the guidelines below are met.
@@ -38,12 +27,6 @@ We will review and help with all reasonable pull requests as long as the guideli
 ## Bugs and Suggestions
 Bug reports and suggestions should be made in this repo's [issue tracker](https://github.com/MeteorDevelopment/meteor-client/issues) using the templates provided.  
 Please provide as much information as you can to best help us understand your issue and give a better chance of it being resolved.
-
-## Donations
-All of our work is completely free and non-profit (donations pay only for hosting costs), therefore we are very grateful for all donations made to support us in running our community.  
-Donations can be made via our [website](https://meteorclient.com/donate) and the minimum amount to get donor benefits is €5.  
-You will be rewarded with a role on our Discord server and a customisable in-game cape.  
-⚠️ _Make sure to create a Meteor account and link your Discord and Minecraft accounts to fully experience your rewards._ ⚠️
 
 ## Credits
 [Cabaletta](https://github.com/cabaletta) and [WagYourTail](https://github.com/wagyourtail) for [Baritone](https://github.com/cabaletta/baritone)  
