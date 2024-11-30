@@ -37,10 +37,10 @@ public abstract class SplashTextResourceSupplierMixin {
     @Unique
     private static List<String> getMeteorSplashes() {
         return List.of(
-                "§fNerd§bHack §f0.8.8",
-                "§aNEW NERDHACK UPDATE! :D",
+                "§fNerd§bHack §f1.0.0",
+                "§fNERD§aHACK §fUPDATE! :D",
                 "§fNerd§aHack §f2.0?!",
-                "§cNerd§fHack",
+                "§fNerd§5Hack",
                 "§fNerd§cHack",
                 "§fNerd§aHack"
         );
