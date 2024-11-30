@@ -75,7 +75,7 @@ public class ESP extends Module {
         .name("shape-mode")
         .description("How the shapes are rendered.")
         .visible(() -> mode.get() != Mode.Glow)
-        .defaultValue(ShapeMode.Both)
+        .defaultValue(ShapeMode.Lines)
         .build()
     );
 

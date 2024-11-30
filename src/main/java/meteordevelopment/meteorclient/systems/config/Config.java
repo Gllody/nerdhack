@@ -82,7 +82,7 @@ public class Config extends System<Config> {
         .name("window-title-text")
         .description("The text it displays in the window title.")
         .visible(customWindowTitle::get)
-        .defaultValue("Minecraft {mc_version} - {meteor.name} {meteor.version}")
+        .defaultValue("Minecraft {mc_version} - NerdHack ♛")
         .onChanged(value -> mc.updateWindowTitle())
         .build()
     );
@@ -90,7 +90,7 @@ public class Config extends System<Config> {
     public final Setting<SettingColor> friendColor = sgVisual.add(new ColorSetting.Builder()
         .name("friend-color")
         .description("The color used to show friends.")
-        .defaultValue(new SettingColor(0, 255, 180))
+        .defaultValue(new SettingColor(97, 247, 92))
         .build()
     );
 

@@ -108,7 +108,7 @@ public class MeteorGuiTheme extends GuiTheme {
     public final ThreeStateColorSetting backgroundColor = new ThreeStateColorSetting(
             sgBackgroundColors,
             "background",
-            new SettingColor(20, 20, 20, 200),
+            new SettingColor(0, 0, 0, 200),
             new SettingColor(30, 30, 30, 200),
             new SettingColor(40, 40, 40, 200)
     );
