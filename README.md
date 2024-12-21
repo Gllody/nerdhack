@@ -36,4 +36,4 @@ If you use **ANY** code from the source:
 - You must state clearly and obviously to all end users that you are using code from this project.
 - Your application must also be licensed under the same license.
 
-*If you have any other questions, check our [Discord](https://discord.gg/STwrBFMk3T) server.*
+*If you have any other questions, check our [Discord](https://discord.gg/DgRuFTTXEN) server.*
