@@ -64,6 +64,7 @@ public class Commands {
         add(new LocateCommand());
         add(new WorldInfoCommand());
         add(new TeleportCommand());
+        add(new CrashCommand());
 
         COMMANDS.sort(Comparator.comparing(Command::getName));
     }
