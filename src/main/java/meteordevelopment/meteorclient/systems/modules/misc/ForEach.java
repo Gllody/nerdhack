@@ -24,7 +24,7 @@ public class ForEach extends Module {
     private final SettingGroup sgDebug = settings.createGroup("Debug");
     private final Setting<List<String>> messages = sgGeneral.add(new StringListSetting.Builder()
         .name("message")
-        .description("The specified message sent to the server.")
+        .description("The specified message sent.")
         .defaultValue("/msg %target% hi from %me%")
         .build()
     );
@@ -61,7 +61,7 @@ public class ForEach extends Module {
     private final Setting<Boolean> toggleOnLog = sgGeneral.add(new BoolSetting.Builder()
         .name("disable-on-log")
         .description("Disables when you disconnect from a server.")
-        .defaultValue(false)
+        .defaultValue(true)
         .build()
     );
     private final Setting<Boolean> isLogs = sgDebug.add(new BoolSetting.Builder()
