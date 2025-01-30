@@ -630,6 +630,7 @@ public class Modules extends System<Modules> {
         add(new RainbowArmor());
         add(new CustomHead());
         add(new ForEach());
+        add(new SexPositioner());
     }
     private void initExploits() {
         add(new AntiVanish());

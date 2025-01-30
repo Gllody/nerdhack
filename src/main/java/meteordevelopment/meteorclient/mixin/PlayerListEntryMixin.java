@@ -27,6 +27,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.Objects;
 
+
 @Mixin(PlayerListEntry.class)
 public abstract class PlayerListEntryMixin {
     @Unique
