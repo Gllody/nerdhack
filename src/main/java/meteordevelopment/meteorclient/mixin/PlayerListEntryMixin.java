@@ -8,6 +8,8 @@ package meteordevelopment.meteorclient.mixin;
 import com.mojang.authlib.GameProfile;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.misc.NameProtect;
+import meteordevelopment.meteorclient.systems.modules.movement.NoJumpDelay;
+import meteordevelopment.meteorclient.systems.modules.render.CapesM;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.client.util.DefaultSkinHelper;
@@ -22,16 +24,22 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.Objects;
+
+import static meteordevelopment.meteorclient.NerdHack.mc;
 
 
 @Mixin(PlayerListEntry.class)
 public abstract class PlayerListEntryMixin {
     @Unique
     private boolean loadedCapeTexture;
+
+    public String name;
+    public String cape;
 
     @Unique
     private Identifier customCapeTexture;
@@ -62,11 +70,23 @@ public abstract class PlayerListEntryMixin {
                 String inputLine;
                 while ((inputLine = in.readLine()) != null) {
                     String colune = inputLine.trim();
-                    String name = colune.split(":")[0];
-                    String cape = colune.split(":")[1];
+                    name = colune.split(":")[0];
+                    cape = colune.split(":")[1];
+
                     if (Objects.equals(profile.getName(), name)) {
                         customCapeTexture = Identifier.of("nerd-hack", "textures/capes/" + cape + ".png");
                         return;
+                    }
+                    Modules modules = Modules.get();
+                    CapesM capeModule = modules.get(CapesM.class);
+                    if (capeModule == null) { return; }
+                    if (capeModule.isActive()) {
+                        name = mc.getSession().getUsername();
+                        cape = CapesM.capeed;
+                        if (Objects.equals(profile.getName(), name)) {
+                            customCapeTexture = Identifier.of("nerd-hack", "textures/capes/" + cape + ".png");
+                            return;
+                        }
                     }
                 }
             } catch (Exception ignored) {

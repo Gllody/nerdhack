@@ -6,7 +6,6 @@
 package meteordevelopment.meteorclient.systems.modules.render;
 
 import meteordevelopment.meteorclient.NerdHack;
-import meteordevelopment.meteorclient.eventbus.EventHandler;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.BoolSetting;
 import meteordevelopment.meteorclient.settings.EnumSetting;
@@ -15,78 +14,40 @@ import meteordevelopment.meteorclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 
+import meteordevelopment.orbit.EventHandler;
 import net.minecraft.client.texture.NativeImage;
 import net.minecraft.util.Identifier;
 
 public class CapesM extends Module {
 
+    public static String capeed;
+
+
     public CapesM() {
-        super(Categories.Render, "capes", "Gives Player NerdHack Capes");
+        super(Categories.Render, "capes", "Aetheric Capes");
     }
 
-    public String capeurl = "https://raw.githubusercontent.com/NotGllody/MCapes/main/NerdCape.png";
-    public String CDOSCape = "1.2.1.2";
-    public String nerdHLoc = "resources/assets/nerd-hack/textures/nerdcape.png";
-    private final SettingGroup sgGeneral = settings.getDefaultGroup();
-    private final Setting<Mode> mode = sgGeneral.add(new EnumSetting.Builder<Mode>()
+    private final SettingGroup sgGeneral1 = settings.getDefaultGroup();
+    public final Setting<Mode> modee = sgGeneral1.add(new EnumSetting.Builder<Mode>()
         .name("mode")
         .description("Decide from packet or client sided rotation.")
-        .defaultValue(Mode.Envy)
+        .defaultValue(Mode.Aetheric)
         .build()
+
     );
-
-
-    private final Setting<Boolean> showCape = sgGeneral.add(new BoolSetting.Builder()
-        .name("Developer-Capes")
-        .description("Shows Developer Capes")
-        .defaultValue(true)
-        .build()
-    );
-    public interface ReturnCapeTexture {
-        void response(Identifier id);
-    }
-
-
-    @EventHandler
-    public boolean onTick(TickEvent.Post event) {
-
-        if (mode.get() == Mode.Envy) {
-            capeurl = "https://raw.githubusercontent.com/Volcanware/Envy-Client/Now-Fixed/EnvyCape.png";
-        }
-        if (mode.get() == Mode.Optifine) {
-            capeurl = "http://s.optifine.net/capes/%s.png";
-        }
-        if (mode.get() == Mode.NerdHack1) {
-            capeurl = "https://raw.githubusercontent.com/NotGllody/MCapes/main/NerdCape.png";
-        }
-        if (mode.get() == Mode.Volcanware) {
-            capeurl = "https://raw.githubusercontent.com/Volcanware/Envy-Client/Now-Fixed/VolcanwareCape.png";
-        }
-        if (mode.get() == Mode.Toxin) {
-            capeurl = "https://raw.githubusercontent.com/Volcanware/Envy-Client/Now-Fixed/ToxinCape.png";
-        }
-
-        return false;
-    }
-    public static final Identifier BLANK = NerdHack.identifier("textures/nerdcape.png");
-    @EventHandler
-    public boolean onTick(TickEvent.Pre event) {
-
-        if (showCape.get()) {
-            try {
-            } catch (Exception ignored) {
-            }
-        }
-
-        return false;
-    }
     public enum Mode {
-        Envy("NH"),
-        Volcanware("TEST"),
-        Toxin("TEST"),
-
-        Optifine("Optifine"),
-        NerdHack1("NerdHack");
+        Aetheric("Aetheric"),
+        Avo("AVO"),
+        Anime1("Anime1"),
+        Anime2("Anime2"),
+        Anime3("Anime3"),
+        Clown("Clown"),
+        Developer("DEV"),
+        Minecon2011("2011"),
+        Minecon2012("2012"),
+        Minecon2013("2013"),
+        Minecon2015("2015"),
+        Minecon2016("2016");
         private final String title;
 
         Mode(String title) {
@@ -97,26 +58,55 @@ public class CapesM extends Module {
         public String toString() {
             return title;
         }
+
     }
-    public static NativeImage parseCape(NativeImage image) {
-        int imageWidth = 64;
-        int imageHeight = 32;
-        int imageSrcWidth = image.getWidth();
-        int srcHeight = image.getHeight();
+    @EventHandler
+    public void onActivate() {
+        // Przypisanie wartości z ustawienia 'modee' do zmiennej 'cape'
+        Mode selectedMode = modee.get(); // Pobranie wybranego trybu raz
 
-        for (int imageSrcHeight = image.getHeight(); imageWidth < imageSrcWidth || imageHeight < imageSrcHeight; imageHeight *= 2) {
-            imageWidth *= 2;
+        // Teraz sprawdzamy wartość trybu i przypisujemy odpowiednią nazwę kaptura
+        switch (selectedMode) {
+            case Aetheric:
+                capeed = "aetheric";
+                break;
+            case Avo:
+                capeed = "avo";
+                break;
+            case Anime1:
+                capeed = "anime1";
+                break;
+            case Anime2:
+                capeed = "anime2";
+                break;
+            case Anime3:
+                capeed = "anime3";
+                break;
+            case Clown:
+                capeed = "clow";
+                break;
+            case Developer:
+                capeed = "dev";
+                break;
+            case Minecon2011:
+                capeed = "2011";
+                break;
+            case Minecon2012:
+                capeed = "2012";
+                break;
+            case Minecon2013:
+                capeed = "2013";
+                break;
+            case Minecon2015:
+                capeed = "2015";
+                break;
+            case Minecon2016:
+                capeed = "2016";
+                break;
+            default:
+                capeed = "default";
+                break;
         }
-
-        NativeImage imgNew = new NativeImage(imageWidth, imageHeight, true);
-        for (int x = 0; x < imageSrcWidth; x++) {
-            for (int y = 0; y < srcHeight; y++) {
-                imgNew.setColor(x, y, image.getColor(x, y));
-            }
-        }
-        image.close();
-        return imgNew;
     }
-
 }
 
