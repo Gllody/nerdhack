@@ -62,10 +62,7 @@ public class CapesM extends Module {
     }
     @EventHandler
     public void onActivate() {
-        // Przypisanie wartości z ustawienia 'modee' do zmiennej 'cape'
-        Mode selectedMode = modee.get(); // Pobranie wybranego trybu raz
-
-        // Teraz sprawdzamy wartość trybu i przypisujemy odpowiednią nazwę kaptura
+        Mode selectedMode = modee.get();
         switch (selectedMode) {
             case Aetheric:
                 capeed = "aetheric";
