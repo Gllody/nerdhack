@@ -49,7 +49,7 @@ public class KillAura extends Module {
     private final SettingGroup sgTargeting = settings.createGroup("Targeting");
     private final SettingGroup sgTiming = settings.createGroup("Timing");
 
-    // General
+    // Generalg
 
     private final Setting<Weapon> weapon = sgGeneral.add(new EnumSetting.Builder<Weapon>()
         .name("weapon")
